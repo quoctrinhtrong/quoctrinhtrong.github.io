@@ -1,0 +1,33 @@
+.triangle__example-row {
+    display: flex;
+}
+
+.triangle__second {
+    display: flex;
+}
+
+.triangle__example-second {
+    margin: 40px 0 0 0;
+    display: block;
+    border: 50px;
+    border-style: solid;
+    border-color: red green blue rgba(255, 216, 64,0.93);
+}
+
+.triangle__example {
+    border-width: 0 50px 50px;
+    border-style: solid;
+    border-color: red rgba(255, 216, 64,0.93) blue rgba(255, 216, 64,0.93);
+}
+
+.triangle__example-three {
+    margin: 40px 0 0 0;
+    display: block;
+    border-width: 20px 40px;
+    border-style: solid;    
+    border-color: transparent transparent blue transparent;
+}
+
+.triangle__three {
+    display: flex;
+}
