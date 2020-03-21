@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>F8-Shop</title>
+        <meta charset="urf-8">
+        <link rel="stylesheet" href="main.css">
+        <!--
+            h1->h6 : heading
+            p: pragraph
+            img: image
+            a : anchor
+            ul, li
+            table, tr, th, td
+            input
+            button
+            div
+        -->
+        <!-- internal -->
+        <style>
+            h1 {
+                color: red;
+            }
+            .box {
+                width: 100%;
+                height: 200px;
+                background-color: red;
+                border-width: 10px 8px 10px 0px;
+                border-style: solid;
+                border-color: black;
+                border-bottom-color: blue;
+            }
+            .box1 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                padding: 22px;
+                box-sizing: border-box;
+                /* box-sizing: border-box not + width height if using padding */
+            }
+            .box2 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                padding: 22px;
+                margin: 10px;
+                border: 20px black;
+                border-style:dashed;
+                background-clip: padding-box; 
+                /* background-clip: padding-box lấy background từ padding chở đi  */
+            }
+
+            .background {
+                width: 100%;
+                height: 300px;
+                background-image:linear-gradient(blue,rgba(0,0,255,0.3)),
+                /* linear-gradient(red,blue) dùng để chuyển màu tuyến tính */
+                url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRAZdIPmnpznFPPIS3Jd4-jFMP6NpdH7r-yi2nxb5KB2bpsAVGA);
+                background-repeat: no-repeat;
+                /* repeat có thể tạo background repeat */
+                background-size:30%;
+                /* background-position: 100px 100px; */
+                
+            }
+
+            .functions {
+                width: calc(100%/2);
+                height: 200px;
+                background:rgba(0,200,255,0.3);
+
+            }
+
+
+            body{
+                height: 100%;
+            }
+
+            a::after {
+                content: attr(href)
+            }
+
+            .active-example:active {
+                color: red;
+            }
+
+            .hover-example:hover {
+                color: orchid;
+            }
+
+            .before-after {
+                height: 300px;
+                width: 300px;
+                background-color: olive;
+            }
+
+            .before-after::before {
+                content: "";
+                display: block;
+                height: 100px;
+                width: 100px;
+                background:red;
+            }
+
+            .before-after::after {
+                content: "";
+                display: block;
+                height: 100px;
+                width: 100px;
+                background: mediumvioletred;
+            }
+
+            .psuedo-elements::selection {
+                color: blue;
+                background: black;
+            }
+
+            .psuedo-elements::first-letter {
+                font-size: 50px;
+            }
+
+            .psuedo-elements::first-line {
+                color: red;
+            }
+
+            .relatve-example {
+                position: relative;
+                top: -100px;
+            }
+
+            .absolute-box {
+                height: 300px;
+                width: 100%;
+                background-color: gray;
+                position: absolute;
+                /* z-index: -1; */
+            }
+
+            .absolute-child {
+                position: absolute;
+                height: 100px;
+                width: 100px;
+                background-color: rgba(255, 255, 255, 0.1);
+                bottom: 0px;
+                /* top: 0px; */
+                right: 0px;
+                /* text-align: center; */
+                
+            }
+
+            .header-fixed-example {
+                height: 100px;
+                position: fixed;
+                background-color: black;
+                top: 0px;
+                width: 100%;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <div class="header-fixed-example"></div>
+        <div class="box">
+                <div class="absolute-box"> ABC
+                        <div class="absolute-child">absolute</div>
+                </div>
+        </div>
+        <div class="box1">box-sizing Css</div>
+        <div class="box2">background-clip</div>
+        <div class="background"></div>
+        <div class="functions">
+        </div>
+        <a href="https://spaceit.org/master-asp-net-core-3-1-razor-pages-2020/">Website Lap Trinh: </a>
+
+        <h1 >Pseudo class</h1>
+        <ul>
+            <li>first child</li>
+            <li class="active-example">Active(press to active)</li>
+            <li class="hover-example">Hover(move mouse to item to hover)</li>
+            <li>HTML, CSS từ zero đến Hero</li>
+            <li>last child</li>
+        </ul>
+
+        <div class="before-after"></div>
+        <p class="psuedo-elements">first line and <br/> first letter</p>
+        <p class="relatve-example">Position relative</p>
+
+        <input type="checkbox">
+        <input type="text">
+        <input name="check" type="radio">
+        <input name="check" type="radio">
+        <input name="check" type="radio">
+
+        <button>Submit</button>
+
+        <p>Tham gia nhóm Học lập trình tại F8 trên Facebook để cùng nhau trao đổi trong quá trình học tập ❤️ </br>
+                Các bạn subscribe kênh Youtube F8 Official để nhận thông báo khi có các bài học mới nhé ❤️</p>
+        <img src=https://www.w3schools.com/images/w3schools_green.jpg"" alt="example image">
+
+        <a href="https://mycv.vn/?login_success=1">https://mycv.vn/?login_success=1</a>
+        
+        <ul style="height:2000px">
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+            <li>list</li>
+        </ul>
+
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Age</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Quoc</td>
+                    <td>24</td>
+                </tr>
+                <tr>
+                    <td>Nam</td>
+                    <td>18</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

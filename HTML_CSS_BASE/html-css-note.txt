@@ -1,0 +1,157 @@
+------------HTML-CSS
+*Các thẻ html thông dụng
+- div
+- p
+- a
+- img
+- table, tr, th, td
+- ul, li
+- h1-h6
+- imput
+- button
+
+*Có bao nhiêu cách để sử dụng CSS trong html
+Có 3 cách:
+	- Internal : Sử dụng tag style trong head tag
+	- External : Tạo 1 file css, sử dụng link tag để import file css
+	- Inline : Sử dụng attribute ngay trong tag
+
+* ID thì #, Class thì "."
+
+* Độ ưu tiên trong CSS
+
+- CSS !important 10001 point  vd : color: black !important; 
+- inline: 1000 point
+- id : 100
+- class : 10
+- tag : 1
+- univeral: 0 vd *
+note: Trong trường hợp bằng nhau thì cái nào viết sau sẽ được áp dụng, và cho phép cộng dồn điểm.
+
+* Có thể đặt biến trong CSS, sử dụng "--" đường trước biến. Sử dụng để có thể tái sử dụng biến trong css
+ example: 
+ :root{
+    --head: red;
+ }
+
+ * Những đơn vị trong CSS
+
+ Absolute unit(đơn vị tuyệt đối)
+ - px (hay dùng)
+
+ Relative units(Những đơn vị tương đối)
+ - % ( tính theo % của phần tử chứa nó)
+ - rem (thính theo thẻ html vd font-size: 100%. Khi đó 1 rem sẽ bằng 16px)
+ - em (tính theo thẻ gần nhất của nó)
+ - vh: viewport height ( tính theo % chiều cao của màn hình)
+ - vw: viewport width ( tính theo % chiều rộng của màn hình)
+ 
+* Border
+ - sử dụng border-width để set các size của border. Có thể sét tích thước riêng của từng border như border-top-width, border-right-width để set các size của border. Có thể sét tích thước riêng của từng border như border-top-width, border-right-width
+ - ngoài ra còn có border-style, border-color.
+ 
+* padding dùng để cách content như p, h1->h6 trong một container.
+
+* margin dùng để khoảng cách giữa các item
+
+* box-sizing : border-box;
+- Dùng để làm cho khi thêm thuộc tính border hoặc padding không tăng kích thước container của nó.
+
+* background-clip.
+- Dùng để quy định nội dung của một container có bao gồm border, padding không.
+
+* background-image: url(), url();
+- Dùng để tạo một backnground đẹp theo image, color tự chỉnh.
+- Có những function hỗ trợ như: linear-gradient(red,rgba(0,0,255,0.3)), thuộc tính background-repeat
+ 
+* background-size
+- Property contain để giữ tỷ lệ hình ảnh, width or height của contain sẽ được 100%;
+- Property cover để fill hình ảnh phủ kín container.
+- Có thể sử dụng units absolute or relative
+
+* background-origin
+- Giúp xác định phạm vi draw của image như, content-box, border-box,...
+
+* background-position
+
+- Giúp xác định vị trí của background image theo trục x,y hoặc top, left, center, ...
+
+* Css function
+- calc() tính toán trong css
+- var() lấy giá trị từ biến được khai báo trong :root
+- linear-gradient() giải màu tuyến tính từ color 1-> color 2
+- attr() lấy giá trị của attribute trong thẻ.
+
+* Psuedo classes
+- :root giúp giai báo biến global
+- :hover giúp css khi di chuyển con chuột đến item
+- :active giúp css khi nhấn giữ vào item.
+ 
+* Psuedo elements
+- ::after // todo
+- ::before //todo
+- ::selelction giúp thay đổi color, background khi select văn bản trên web
+- ::first-letter giúp css cho chữ cái đầu tiên trong văn bản.
+- ::first-line giúp css cho dòng đầu tiên
+
+*** Position in CSS
+
+* Relative 
+- cú pháp: position: relative;
+- giúp định dạng vị trí tương đối của item.
+- relative không toan tâm đến vị trí của những item khác
+- để sử dụng thêm thuộc tính top, left, right, button đến css của item
+
+* Absolute
+- cú pháp: position: absolute
+- giúp di chuyển trong contain cha có thuộc tính position.
+- di chuyển bằng cách sử dụng top, right, bottom, left.
+- phụ thuộc vào phạm vi của cha
+
+* fixed
+- Giúp fixed một vị trí thường là ở trong khung của body
+- vd làm footer và header
+- Cũng sử dụng các thuộc tính top, left, right, bottom.
+
+* sticky
+
+- giúp giữ vị trí ở một vị trí nào đó khi kéo scroll
+
+**Flexbox
+CSS Flexbox?
+display: flex | inline-flex // Sử dụng flex để tạo khung của layout được dễ hơn, chia layout
+flex-direction: row | column // Cách hiển thị theo chiều nào.
+flex-wrap: nowrap | wrap | wrap-reverse // Có xuống hàng khi tràn layout hay không?
+flex-basis: <length> // Viết ở child của flex parent để quy định chiều width/height của item trong flex
+justify-content: flex-start | flex-end | center | space-between | space-around // quy định cách hiển thi của item con theo chiều main-axis.
+justify-self: flex-start | flex-end | center // Quy định cách hiển thị của item có parent là flex theo chiều main-axis.
+align-content: flex-start | flex-end | center // quy định cách hiển thi của item con theo chiều cross-axis.
+align-self: flex-start | flex-end | center // Quy định cách hiển thị của item có parent là flex theo chiều main-axis.
+flex-grow: <number>
+flex-shrink: <number>
+flex: <flex-grow> | <flex-shrink> | <flex-basis> // shorthand giúp quy định độ rộng của item. vd : item 1 có flex: 1; item 2 có flex: 2. Khi đó item 2 có chiều rộng gấp 2 item 1.
+flex-flow: <flex-direction> | <flex-wrap> // shorthand quy định hướng hiển thị theo column hay row và có xuống dòng không. vd: flex-flow: column wrap;
+order: <number> // Sắp xếp thứ tự của item trong flex.
+
+* https://caniuse.com/ check support của các thẻ html, css
+
+***** PRACTICAL CONTENT *****
+
+**Header sử dụng flex-box;
+
+* Modal cơ bản
+
+* overflow : Khi mà child vượt quá parent thì làm gì.
+ - vd : overflow: hidden;
+ 
+ * box-shadow: Sử dụng để làm shadow tron container.
+ - vd : box-shadow: 1px 5px 8px #888888;
+
+* Nguyên tắc chia responsive
+
+- lần lượt lồng nhau
+
+grid
+	row
+		column-2
+		column-2
