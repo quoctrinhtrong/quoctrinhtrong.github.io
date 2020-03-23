@@ -1,0 +1,24 @@
+--ES6--
+
+// arrow functions
+
+arrowFunction = (a,b) => {
+	//handle for function
+}
+
+// concat string
+
+var name = ` Your name is ${first} ${last}.`;
+var url = `http://localhost:3000/api/messages/${id}`;
+
+// promise
+
+var wait1000 = new Promise((resolve, reject) => {
+	setTimeout(resolve,1000)
+}).then(() => {
+	console.log('OK')
+})
+
+// let var const
+
+https://viblo.asia/p/10-tinh-nang-cua-es6-lap-trinh-javascript-phai-biet-07LKXwQE5V4

@@ -1,0 +1,66 @@
+//AJAX
+
+- Ajax là viết tắt của Asynchronous javascript and XML
+- Ajax giúp các ứng dụng web động, tăng tốc độ của web qua sử lý bất đồng bộ, hạn chế việc
+ tải lại trang khi chỉ có một phần thay đổi
+
+- Ajax gồm 5 bước sau:
+ 1. XMLHTMLRequest call
+ 2. Server xử lý yêu cầu
+ 3. Truy vấn đến DB
+ 4. Return về XML data cho client
+ 5. Ajax engine thực hiện update phần UI.
+ 
+ Example: Search Google không phải load lại trang, Submit form
+ 
+// JQuery  
+//https://viblo.asia/p/jquery-ban-nen-hoc-gi-eW65GPXLKDO
+// https://www.w3schools.com/js/js_jquery_css.asp
+//to simplify HTML DOM Manipulation, Event Handling, Animations, and Ajax.
+ 
+ - Jquery là một thư viện giúp đơn giản cách viết của javascript, và dễ dang sử dụng dựa vào selector id, class, attribute của element dom
+   vd đơn giản về việc rủ ngắn hơn javascript
+   Return the element with id="id01":
+		+ javascript: 
+		 var myElement = document.getElementById("id01");
+		+ JQuery
+		 var myElement = $("#id01");
+ - Một số tính năng như:
+	1. Kiểm tra DOM đã sẵn sang để thực hiện jquery chưa:
+
+		($document).ready(
+			function() {
+				console.log('DOM is ready');
+			}
+		);
+
+	2. JQuery Selector: Có nhiều cách để chọn các element với id, class, attribute, parent...
+	// sử dụng để set text như element.text("1234"), 
+		+ $("*")  // Chọn tất cả các element
+		+ $(this) // Chọn element hiện tại.
+		// Một vd khi xử dụng this trong jquery
+		$("button").click(function(event) {
+			// $(this) sẽ có giá trị của đối tượng button (`$("button")`) bởi
+			// vì đối tượng này gọi phương thức click()
+			console.log($(this).prop("name"));
+		});
+		// https://viblo.asia/p/this-trong-javascript-gAm5ywe8Zdb
+		+ $("p.intro") // Chọn thất cả các element <p/> với class intro
+		javascript viết như sau : var myElements = document.querySelectorAll("p.intro");
+	....
+	3. JQuery Ajax method
+		$.ajax({
+            url: "file.txt",
+            success: function (result,status,xhr) {
+                $("#textData").html(result);
+            }
+        });
+	4. JQuery each()
+		Dùng để lặp qua các element hoặc các array
+	5. Set css 
+		myElement.style.display = "none";
+		myElement.css("font-size","35px");
+ 
+ 
+ 
+ * Nhược điểm: Nếu sử dụng quá nhiều sẽ làm tăng sử lý trên client, làm cho client yếu chậm chạp
