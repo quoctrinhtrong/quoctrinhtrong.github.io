@@ -1,2 +1,38 @@
 https://viblo.asia/p/mot-so-ham-huu-ich-de-xu-ly-mang-trong-javascript-Az45bW06KxY
 https://viblo.asia/p/mot-so-ham-javascript-huu-ich-ve-array-va-object-bWrZnggOlxw
+
+**array.reduce
+
+const array1 = [1,10, 2,8, 3,9, 10];
+var max = 0;
+
+// Tìm index của tích 2 số liền nhau lớn nhất
+const reducer = (accumulator, currentValue, currentIndex,array) => {
+  if(currentIndex != array.length) {
+  	if(currentValue*array[currentIndex+1] > max) {
+    	accumulator.index1 = currentIndex;
+    	accumulator.index2 = currentIndex+1;
+        max = currentValue*array[currentIndex+1];
+  	}
+  }
+  return accumulator;
+};
+
+// Tìm số lớn thứ 2 trong mảng
+const findSecondMax = (accumulator, currentValue,currentIndex,array) => {
+  if(currentValue > accumulator.max1) {
+    accumulator.max2 = accumulator.max1;
+    accumulator.max1 = currentValue;
+  } else if(currentValue > accumulator.max2 && currentValue != accumulator.max1) {
+    accumulator.max2 = currentValue;
+  }
+  return accumulator;
+};
+
+console.log(array1.reduce(reducer, {index1: 0, index2: 0}));
+//expected output: {index1: 5, index2: 6}
+
+console.log(array1.reduce(findSecondMax, {max1: 0, max2: 0}));
+// expected output: max1: 9, max2: 10
+
+

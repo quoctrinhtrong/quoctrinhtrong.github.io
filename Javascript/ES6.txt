@@ -21,4 +21,4 @@ var wait1000 = new Promise((resolve, reject) => {
 
 // let var const
 
-https://viblo.asia/p/10-tinh-nang-cua-es6-lap-trinh-javascript-phai-biet-07LKXwQE5V4
+https://viblo.asia/p/ecmascript-es6-la-gi-overview-es6-gAm5y9RA5db
