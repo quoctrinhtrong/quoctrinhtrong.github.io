@@ -213,5 +213,21 @@ ex: <meta name="viewport" content="width=device-width, initial-scale=1">
 - https://zellwk.com/blog/media-query-units/
 - convert: https://www.w3schools.com/tags/ref_pxtoemconversion.asp
 
+* Các thành phần trong website
+
+- Grid: Thành phần cha chứa row
+- Row: Dòng chiều ngang chưa column
+- Column: Cột chứa nội dung, thành thần trên website (Số cột trong một trang có thể thay đổi theo kích thước của device khi responsive)
+- Gutter: Khoảng cách giữa các cột
+
+* UI/UX 
+- UI: User interface( Giao diện người dùng)
+- UX: User Experience( Trãi nghiệm người dùng)
+
+** Grid System
+
+- https://codepen.io/ng-ngc-sn-the-bashful/pen/dyovNrP
+
+
 
 

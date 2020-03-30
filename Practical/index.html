@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/normallize.css">
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/grid.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=vietnamese" rel="stylesheet">
     <link rel="stylesheet" href="./assets/fonts/fontawesome-5.12.1/css/all.min.css">
     <!-- <script src="main.js"></script> -->
@@ -18,8 +20,8 @@
 <body>
     <div class="app">
         <header class="header">
-            <div class="grid">
-                <nav class="header__navbar">
+            <div class="grid wide">
+                <nav class="header__navbar hide-on-mobile-tablet">
                     <ul class="header__navbar-list">
                         <li class="header__navbar-item header__navbar-item-has-qr header__navbar-item--seperate">
                             Vào cửa hàng trên ứng dụng F8-shop
@@ -118,7 +120,13 @@
                 </nav>
                 <!-- Header with search -->
                 <div class="header-with-search">
-                    <div class="header__logo">
+                    <!-- Search on mobile -->
+                    <label for="mobile-search-input" class="header__mobile-search">
+                        <i class="header__mobile-search-icon fas fa-search"></i>
+                    </label>
+                    <input type="checkbox" hidden id="mobile-search-input" class="header__search-input">
+
+                    <div class="header__logo hide-on-tablet">
                         <a href="/Practical/index.html" class="header__logo-link">
                             <svg class="header__logo-img" viewBox="0 0 192 65">
                                 <g fill-rule="evenodd">
@@ -311,9 +319,23 @@
                     </div>
                 </div>
             </div>
+            <ul class="header__sort-bar">
+                <li class="header__sort-bar-item">
+                    <a href="" class="header__sort-bar-link">Liên quan</a>
+                </li>
+                <li class="header__sort-bar-item header__sort-bar-item--active">
+                    <a href="" class="header__sort-bar-link">Mới nhất</a>
+                </li>
+                <li class="header__sort-bar-item">
+                    <a href="" class="header__sort-bar-link">Bán chạy</a>
+                </li>
+                <li class="header__sort-bar-item">
+                    <a href="" class="header__sort-bar-link">Giá</a>
+                </li>
+            </ul>
         </header>
         <div class="app_container">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row app_content">
                     <div class="grid__column-2">
                         <nav class="category">
@@ -335,7 +357,7 @@
                         </nav>
                     </div>
                     <div class="grid__column-10">
-                        <div class="home-filter">
+                        <div class="home-filter hide-on-mobile-tablet">
                             <span class="home-filter__label">Sắp xếp theo</span>
                             <button class="btn home-filer-btn">Phổ biến</button>
                             <button class="btn home-filer-btn btn-primary">Mới nhất</button>
@@ -832,7 +854,7 @@
             </div>
         </div>
         <footer class="footer">
-            <div class="grid">
+            <div class="grid wide">
                 <div class="grid__row">
                     <div class="grid__column-2-4">
                         <h3 class="footer__heading">Chăm sóc khách hàng</h3>
@@ -916,7 +938,7 @@
                 </div>
             </div>
             <div class="footer__bottom">
-                <div class="grid">
+                <div class="grid wide">
                     <p class="footer__text">© 2020 Mỹ Phẩm Ohui - LG Vina - 63 Lê Văn Lương, Trung Hòa, Cầu Giấy, Hà Nội</p>
                 </div>
             </div>
