@@ -2,13 +2,8 @@ React docs;
 //Learn
 https://medium.com/@0x8f1e7/t%C3%B4i-%C4%91%C3%A3-b%E1%BA%AFt-%C4%91%E1%BA%A7u-h%E1%BB%8Dc-react-nh%C6%B0-th%E1%BA%BF-n%C3%A0o-6c2b013625fe
 
-// Redux
-https://viblo.asia/p/tim-hieu-redux-qua-vi-du-thuc-te-gAm5yaNO5db
-https://redux.js.org/basics/example/
-https://viblo.asia/p/tung-buoc-build-mot-ung-dung-react-redux-Eb85oEO8Z2G
 
-
-//interview
+//*****
 https://viblo.asia/p/nhung-cau-hoi-thuong-gap-khi-phong-van-react-js-va-dap-an-phan-1-XL6lAnAR5ek
 https://forum.fetch.tech/t/m-t-s-cau-h-i-ph-ng-v-n-es6-va-react-redux/33
 
@@ -18,4 +13,10 @@ https://ehkoo.com/bai-viet/tat-tan-tat-ve-promise-va-async-await
 
 //redux
 https://viblo.asia/p/redux-cho-nguoi-moi-bat-dau-part-1-introduction-ZjleaBBZkqJ
+
+*Các thành phần chính:
+	- Action
+	- Store
+	- Reducer
+	- View
 
