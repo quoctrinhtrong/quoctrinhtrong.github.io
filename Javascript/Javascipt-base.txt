@@ -1,6 +1,57 @@
 https://viblo.asia/p/mot-so-ham-huu-ich-de-xu-ly-mang-trong-javascript-Az45bW06KxY
 https://viblo.asia/p/mot-so-ham-javascript-huu-ich-ve-array-va-object-bWrZnggOlxw
 
+Question
+https://viblo.asia/p/javascript-va-nhung-cau-hoi-kho-part-1-E375zgyjKGW
+https://viblo.asia/p/mot-vai-cau-hoi-ve-javascript-ma-mot-intern-fresher-can-biet-khi-di-phong-van-L4x5x1agKBM
+
+**array.filter
+**array.map
+**array.reduce
+**array.sort
+
+var array1 = [{id:1, status: false}, {id:4, status: false}]
+var array2= [{id:2, status: true},{id:3, status: true}]
+
+// spread operator ES6
+array1 = [...array1, ...array2];
+console.log(array1);
+
+**array.map
+// Update, change data in item
+array1 = array1.map((item) => {
+  if(item.id === 2){
+    item.status = false;
+  }
+  return item;
+});
+console.log(array1);
+
+**array.filter
+// get item have status = false
+array1 = array1.filter(item => {
+  return item.status === false;
+});
+console.log(array1);
+
+**array.reduce
+// Count status = false
+let count = array1.reduce((acc, curr)=> {
+  return acc + (curr.status === false ? 1: 0);
+} , 0);
+console.log(count);
+
+
+**array.sort
+array1.sort((a,b) => {
+  if(a.id > b.id) return 1;
+  if(a.id < b.id) return -1;
+  return 0;
+});
+console.log(array1);
+
+
+
 **array.reduce
 
 const array1 = [1,10, 2,8, 3,9, 10];

@@ -22,3 +22,6 @@ var wait1000 = new Promise((resolve, reject) => {
 // let var const
 
 https://viblo.asia/p/ecmascript-es6-la-gi-overview-es6-gAm5y9RA5db
+
+// Generators Function
+https://topdev.vn/blog/cung-kham-pha-suc-manh-cua-es6-generators/
