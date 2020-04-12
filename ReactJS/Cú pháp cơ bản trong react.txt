@@ -1,0 +1,101 @@
+*** Một số extensions trong visual code
+- Reactjs code snippets
+- Eslint
+- Auto close tag
+- Auto rename tag
+- vscode-icons
+
+*** Extensions chrome
+React Developer tools
+Redux DevTools
+
+*** Install and create
+
+***Tạo môt class componnent
+
+import React, { Componnent } from 'react'
+
+class ColorPicker extends Componnent {
+    render() {
+        return (
+            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="content" >
+                    Nội dung setting
+                </div>
+            </div>
+        );
+    }
+}
+
+export default ColorPicker;
+
+* Giao tiếp giữa 2 Compenent
+
+- Sử dụng props function để cập nhật cho state của component cha.
+- Có thể xem example ở: E:\Document_Reactjs\Setting_Text_Color
+
+* Muốn thêm tham số vào một event trong item có event nào đó
+<input onChange={(event) => this.handleChange("second data", event)}>
+
+
+* Duyệt một array object sử dụng map
+	let products = [
+		{
+			id:1,
+			name: 'product1'
+		},
+		{
+			id:1,
+			name: 'product1'
+		},
+		{
+			id:1,
+			name: 'product1'
+		}
+	]
+
+    let element = this.state.products.map((product, index) => {
+      if(product.status) {
+        return (
+          <tr key = {index}>
+            <td scope="row">{index}</td>
+            <td>{product.name}</td>
+            <td>{product.price} VND</td>
+          </tr>
+        )
+      }
+    });
+
+* Set State
+
+	this.setState({isActive:true});
+	
+*** Component life cycle
+************************************ PHẢI HỌC *****
+https://viblo.asia/p/vong-doi-cua-component-new-Qbq5QMYX5D8
+Nên sử dụng:
+
+- componentDidMount(): Chỉ xảy ra một lần khi khởi tạo component, sử dụng để get data từ API, update cho state
+- componentWillUnmount(): Chỉ xảy ra một lần khi hủy componnent, sử dụng để reset state, remove event đã add
+- componentDidUpdate(): Xảy ra khi update đã xong, thực hiện cho một số sự kiện khi render xong như sroll,có thể set state nhưng vẫn thân vòng lặp vô hạn.
+- getDerivedStateFromProps(): Xảy ra trước khi render khi có props hoặc state thay đổi. Có thể return state mới ở đây theo props hoặc không thay đổi thì return null.
+Lưu ý:  getDeviredStateFromProps là hàm tĩnh,không thể dùng this.setState 
+
+
+* Sử dụng localStorage
+- Lưu ở localStorage khi đóng trình duyệt hay reload sẽ không bị xóa.
+- Có thể lưu tới ~5M
+- Cú pháp: - Set: localStorage.setItem('keys',value);
+		   - Get: localStorage.getItem('keys');
+		   - Remove: Set item again
+		   
+**** PropTypes 
+- https://reactjs.org/docs/typechecking-with-proptypes.html
+- Sử dụng PropTypes để check kiểu của dử liệu prop chuyền vào
+		 
+****Redux
+
+install: - npm install redux react-redux --save
+		 
+
+
