@@ -8,8 +8,17 @@
 *** Extensions chrome
 React Developer tools
 Redux DevTools
+optional: JSONView(format json)
 
 *** Install and create
+
+* React Router
+
+install: - npm install react-router-dom --save
+		 
+* Redux
+
+install: - npm install redux react-redux --save
 
 ***Tạo môt class componnent
 
@@ -89,13 +98,29 @@ Lưu ý:  getDeviredStateFromProps là hàm tĩnh,không thể dùng this.setSta
 		   - Get: localStorage.getItem('keys');
 		   - Remove: Set item again
 		   
-**** PropTypes 
+*** PropTypes 
 - https://reactjs.org/docs/typechecking-with-proptypes.html
 - Sử dụng PropTypes để check kiểu của dử liệu prop chuyền vào
-		 
-****Redux
 
-install: - npm install redux react-redux --save
+*** React Router
+https://reacttraining.com/react-router/web/example/basic
+- Nếu muốn dùng các thẻ sau thì import vào
+- BrowserRouter as Router: Bao các route lại
+- Route: dẫn đến các component tùy chọn. Ex: <Route path="/" exact component={Home} />
+- Link: Để không reload lại trang thì dùng thẻ <Link/> thay thế thẻ <a/>. Ex: <Link to="/" className="my-link">Home</Link>
+- NavLink: Sử dụng khi cần activeStyle, activeClassName để thay đổi css của Link đang được click. 
+  activeClassName thường được sử dụng khi link được click thì thêm class. Ex: <NavLink exact activeClassName="active" to="/contact">Contact</NavLink>
+- CustomLink: Sử dụng để custom lại <Link>. Giúp thêm class vào tag khi Link được active. Refer: https://reacttraining.com/react-router/web/api/Route/children-func
+- Match: Sử dụng match để lấy trang url hiện tại. Có thể sử dụng để get sản phẩm và hiển thị chi tiết sản phẩm từ đối tượng match này.
+- Prompt(Lời nhắc): Giúp hiển thị một alert khi người dùng thoát khỏi trang. vd khi đã nhập text mà bấm thoát trang thì sẻ hỏi có muốn thoát trang hay không?
+*** Redux
+
+*** Một số cách giả lập API
+- MockAPI(https://mockapi.io/): sử dụng trên internet, có thể tạo mockApi để deloy web react
+- JSON server(https://github.com/typicode/json-server): Sử dụng dưới local, có nhiều tính năng hơn mockAPI
+
+*** ReactJs + Laravel
+https://viblo.asia/p/su-dung-reactjs-trong-project-laravel-OeVKBJpdKkW
 		 
 
 

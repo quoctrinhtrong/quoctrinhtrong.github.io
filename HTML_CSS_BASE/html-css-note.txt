@@ -41,8 +41,8 @@ note: Trong trường hợp bằng nhau thì cái nào viết sau sẽ được 
 
  Relative units(Những đơn vị tương đối)
  - % ( tính theo % của phần tử chứa nó)
- - rem (thính theo thẻ html vd font-size: 100%. Khi đó 1 rem sẽ bằng 16px)
- - em (tính theo font-size thẻ mẹ của nó)
+ - rem (tính theo font-size thẻ html vd font-size: 100%. Khi đó 1 rem sẽ bằng 16px)
+ - em (tính theo font-size thẻ cha của nó)
  - vh: viewport height ( tính theo % chiều cao của màn hình)
  - vw: viewport width ( tính theo % chiều rộng của màn hình)
  
