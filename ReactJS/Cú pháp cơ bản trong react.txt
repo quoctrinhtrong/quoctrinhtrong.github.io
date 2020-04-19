@@ -20,6 +20,10 @@ install: - npm install react-router-dom --save
 
 install: - npm install redux react-redux --save
 
+* Axios API
+
+install: - npm install axios --save
+
 ***Tạo môt class componnent
 
 import React, { Componnent } from 'react'
@@ -114,13 +118,28 @@ https://reacttraining.com/react-router/web/example/basic
 - Match: Sử dụng match để lấy trang url hiện tại. Có thể sử dụng để get sản phẩm và hiển thị chi tiết sản phẩm từ đối tượng match này.
 - Prompt(Lời nhắc): Giúp hiển thị một alert khi người dùng thoát khỏi trang. vd khi đã nhập text mà bấm thoát trang thì sẻ hỏi có muốn thoát trang hay không?
 *** Redux
+- Gồm 4 thần chính: action, reducer, store, view
+- action: mang thông tin từ người dùng đến reducer
+- reducer: quyết định việc thay đổi state trên store như thế nào
+- store: nơi lưu các state
+- view: nơi sử dụng các state update UI
+** Middleware
+- sử dụng middleware để fetch data. Vì trong redux, một action phải return về một object.
+* Redux-thunk
 
 *** Một số cách giả lập API
 - MockAPI(https://mockapi.io/): sử dụng trên internet, có thể tạo mockApi để deloy web react
 - JSON server(https://github.com/typicode/json-server): Sử dụng dưới local, có nhiều tính năng hơn mockAPI
 
+*** Fetch API using Axios
+https://github.com/axios/axios
+
 *** ReactJs + Laravel
 https://viblo.asia/p/su-dung-reactjs-trong-project-laravel-OeVKBJpdKkW
+
+*** Auth 
+https://viblo.asia/p/authorization-voi-jwt-trong-reactredux-app-GrLZD8nOZk0
+https://viblo.asia/p/tai-sao-phai-su-dung-json-web-token-jwt-de-bao-mat-api-maGK787AZj2
 		 
 
 
