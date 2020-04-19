@@ -5,10 +5,15 @@ Question
 https://viblo.asia/p/javascript-va-nhung-cau-hoi-kho-part-1-E375zgyjKGW
 https://viblo.asia/p/mot-vai-cau-hoi-ve-javascript-ma-mot-intern-fresher-can-biet-khi-di-phong-van-L4x5x1agKBM
 
+
+*pure function là gì?
 **array.filter
 **array.map
 **array.reduce
 **array.sort
+**promise
+**async/await (https://viblo.asia/p/js-promise-va-asyncawait-cuoc-chien-khong-hoi-ket-hay-la-su-dong-hanh-dang-ghi-nhan-4P856OjBKY3)
+** Generator function (https://developer.mozilla.org/vi/docs/Web/JavaScript/Reference/Statements/function*) - (https://davidwalsh.name/es6-generators)
 
 var array1 = [{id:1, status: false}, {id:4, status: false}]
 var array2= [{id:2, status: true},{id:3, status: true}]
