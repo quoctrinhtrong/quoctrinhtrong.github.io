@@ -13,16 +13,18 @@ optional: JSONView(format json)
 *** Install and create
 
 * React Router
-
+https://reacttraining.com/react-router/web/api/history
 install: - npm install react-router-dom --save
 		 
 * Redux
-
 install: - npm install redux react-redux --save
 
 * Axios API
-
+https://github.com/axios/axios
 install: - npm install axios --save
+
+* Material
+https://material-ui.com/getting-started/installation/
 
 ***Tạo môt class componnent
 
@@ -123,9 +125,28 @@ https://reacttraining.com/react-router/web/example/basic
 - reducer: quyết định việc thay đổi state trên store như thế nào
 - store: nơi lưu các state
 - view: nơi sử dụng các state update UI
+** Side-Effect
+- Là những tác vụ app tương tác với bên ngoài như: call API, đọc ghi file...
+- Trong redux thì side-effect thường nằm ở trong action or middleware
+- NOTE: không sử lý side-effect ở redux vì reducer phải là pure function
+
 ** Middleware
 - sử dụng middleware để fetch data. Vì trong redux, một action phải return về một object.
+
 * Redux-thunk
+- Giúp có thể gọi một function có call api, async func trong redux
+- Chạy trên môi trường javascript
+
+* Redux-saga
+- Chạy trên môi trường ES6 vì nó sử dụng generator func làm cốt lõi.
+- Sử dụng từ khóa yield và generator function để đơn giản hóa async.
+- Giúp rõ ràng hơn trong các bước thực hiện => dễ testing hơn.
+- yield* : để nhượng quyền cho generator func khác.
+- rootSaga dùng để điều phối và lắng nghe các action (ex: sagaMiddleware.run(rootSaga)).
+- fork: Sử dụng để có thể sử dụng nhiều sagas trong redux-saga. Đầu vào của fork là một generator function và nó là một non-blocking.
+- take: Sử dụng để đợi một action được gọi thì làm tiếp những code phía sau. Truyền vào một action type khi dùng. Nó là một blocking, 
+và nó chỉ lắng nghe được một lần, nếu muốn nhiều lần phải dùng while(true), để không kết thúc function.
+- call: Sử dụng call để thực thi một function, thường là call api. Nó là một blocking. Khi nào API trả về kết quả thì mới chạy tiếp.
 
 *** Một số cách giả lập API
 - MockAPI(https://mockapi.io/): sử dụng trên internet, có thể tạo mockApi để deloy web react
@@ -139,7 +160,39 @@ https://viblo.asia/p/su-dung-reactjs-trong-project-laravel-OeVKBJpdKkW
 
 *** Auth 
 https://viblo.asia/p/authorization-voi-jwt-trong-reactredux-app-GrLZD8nOZk0
+https://levelup.gitconnected.com/using-jwt-in-your-react-redux-app-for-authorization-d31be51a50d2
 https://viblo.asia/p/tai-sao-phai-su-dung-json-web-token-jwt-de-bao-mat-api-maGK787AZj2
+
+** Eslint
+- Giúp code chặt chẽ theo rule hơn.
+* Install: 
+- npm install eslint --save-dev
+- cài đặt eslint trong extensions
+- npm install eslint babel-eslint --save-dev ( để có thể using es6)
+- tạo file .eslintrc.js cùng cấp với package.json
+- code trong file: ex : 
+	module.exports = {
+		parser: "babel-eslint",
+		rules: {
+			semi: 1,
+			quotes: [2, 'single']
+		}
+	};
+- Sử dụng eslint-plugin-react(https://github.com/yannickcr/eslint-plugin-react) để check proptypes
+- Sử dụng eslint-config-airbnb để thêm một số rule về space, v.v (https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb), nên lược bỏ một số rule không cần thiết
+
+** Prettier
+- Tích hợp Prettier để kết hợp eslint format code theo rule, và thêm một số rule (eslint-config-prettier, eslint-plugin-prettier, prettier) (https://prettier.io/docs/en/integrating-with-linters.html)
+
+** Husky
+- Tích hợp husky để giúp check eslint và prettier xong mới cho commit code lên git.
+- install npm install --save-dev husky lint-staged (https://www.npmjs.com/package/husky)
+- Tích hợp thêm lint-staged để gọi npm run (https://www.npmjs.com/package/lint-staged)
+- note: thêm vào package.json
+
+** Editor config extensions
+- Giúp cấu hình file code ( vd: space 2, độ dài tối đa dòng code: 80, v.v)
+- Copy tại: https://github.com/facebook/react/blob/master/.editorconfig
 		 
 
 
