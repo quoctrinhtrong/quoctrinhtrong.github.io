@@ -91,4 +91,33 @@ console.log(array1.reduce(reducer, {index1: 0, index2: 0}));
 console.log(array1.reduce(findSecondMax, {max1: 0, max2: 0}));
 // expected output: max1: 9, max2: 10
 
+** Generator function
+- Có thể dừng ở giữa function khi gặp từ khóa yield
+- Có thể trả về giá trị của lần thực hiện yield đó.
+- Có thể lưu giá trị của biến trước đó
+- Example: 
+function* secondGenerator(x) {
+	var y = 2 * (yield(x + 1));
+    var z = yield (y / 3);
+  	return ( x + y + z);
+}
+
+var gen = secondGenerator(5);
+
+console.log(gen.next());
+console.log(gen.next(12));
+console.log(gen.next(13));
+
+** Polling ( client pull ) 
+- Gửi request từ client sau đó nhận data về
+
+** Server sent event (server push)
+- Gửi request lần đầu. Đó server sẽ gửi data mỗi khi thay đổi
+
+** Websocket (server push)
+
+- Có thể gửi và nhận từ 2 chiều khi data thay đổi
+	
+
+
 
