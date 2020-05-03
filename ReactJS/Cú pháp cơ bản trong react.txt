@@ -143,10 +143,15 @@ https://reacttraining.com/react-router/web/example/basic
 - Giúp rõ ràng hơn trong các bước thực hiện => dễ testing hơn.
 - yield* : để nhượng quyền cho generator func khác.
 - rootSaga dùng để điều phối và lắng nghe các action (ex: sagaMiddleware.run(rootSaga)).
-- fork: Sử dụng để có thể sử dụng nhiều sagas trong redux-saga. Đầu vào của fork là một generator function và nó là một non-blocking.
-- take: Sử dụng để đợi một action được gọi thì làm tiếp những code phía sau. Truyền vào một action type khi dùng. Nó là một blocking, 
+- fork: Sử dụng để có thể sử dụng nhiều sagas trong redux-saga. Đầu vào của fork là một generator function và nó là một non-blocking,
 và nó chỉ lắng nghe được một lần, nếu muốn nhiều lần phải dùng while(true), để không kết thúc function.
+- take: Sử dụng để đợi một action được gọi thì làm tiếp những code phía sau. Truyền vào một action type khi dùng. Nó là một blocking.
 - call: Sử dụng call để thực thi một function, thường là call api. Nó là một blocking. Khi nào API trả về kết quả thì mới chạy tiếp.
+- put: dispatch một action đến reducer
+- delay: delay miliseconds trước khi thực hiện một công việc nào đó
+- takeLatest: thay thế cho fork, mà không cần sử dụng vòng lặp vô tận như fork, chạy một loạt action và lấy kết quả của cuối cùng. Ex: khi sử dụng search
+- takeEvery: ngược lại takeLatest. Chạy mỗi khi gọi action và không quan tâm action trước đã xong hay chưa.
+- select: lấy data từ store
 
 *** Một số cách giả lập API
 - MockAPI(https://mockapi.io/): sử dụng trên internet, có thể tạo mockApi để deloy web react
