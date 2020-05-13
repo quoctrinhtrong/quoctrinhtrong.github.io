@@ -47,7 +47,7 @@ note: Trong trường hợp bằng nhau thì cái nào viết sau sẽ được 
  - vw: viewport width ( tính theo % chiều rộng của màn hình)
  
 * Border
- - sử dụng border-width để set các size của border. Có thể sét tích thước riêng của từng border như border-top-width, border-right-width để set các size của border. Có thể sét tích thước riêng của từng border như border-top-width, border-right-width
+ - sử dụng border-width để set các size của border. Có thể set kích thước riêng của từng border như border-top-width, border-right-width để set các size của border. Có thể sét tích thước riêng của từng border như border-top-width, border-right-width
  - ngoài ra còn có border-style, border-color.
  
 * padding dùng để cách content như p, h1->h6 trong một container.
