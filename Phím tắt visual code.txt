@@ -1,0 +1,6 @@
+ctrl + D : select hàng loạt
+alt + click : Để tạo edit text nhiều nơi
+alt + shift + f: format code
+alt + shift + o : format import
+ctrl + ]: thụt vào
+ctrl + [: thụt ra
