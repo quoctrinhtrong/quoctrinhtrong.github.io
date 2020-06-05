@@ -1,0 +1,30 @@
+----------------------GIT-------------------------
+*** Một số lệnh cơ bản
+
+- git init 								// Tạo một cái respository trên máy bạn
+- git clone /path/to/respository		// Lấy từ trên mạng về
+- git pull								// Đồng bộ từ trên mạng về máy
+- git add <file name>					// Add một file trên respository trên máy
+- git add .								// Add tất cả các file vào respository trên máy local
+- git commit -m "commit message"        // Commit vào respository trên máy local
+- git log								// Xem thông tin các file
+- git status							// Xem thông tin các file
+- git remote add origin https://github.com/quoctrinhtrong/quoctrinhtrong.github.io // Gắn origin
+- git push origin master				// Đẩy các file, đồng bộ respository máy local và respository máy server lên origin
+- git push -u origin master				// Đẩy các file lên master khi mới tạo respository
+
+NOTE: Khi gặp conflict thì "git pull" về và chọn mội dung => git add . => git commit -m "resolve conflict" => git push
+---
+
+*** Một số lệnh nâng cao
+
+- git branch -b <branch>				// Create branch và checkout vào branch
+- git branch <branch> 					// Chỉ tạo branch và không check out
+- git branch 							// Xem tất cả các branch
+- git push --set-upstream origin <branch name> 	// Đẩy branch lên remote respository
+- git branch -d <branch> 				// Delete branch
+- git checkout <branch> 				// Chuyển đến branch theo tên của branch, có thể chuyển đến master ( git checkout master )
+- git push origin <branch> 				// Đẩy source lên branch nào đó
+- git merge < branch > 					// merge branch vào master hoặc branch hiện tại
+- git rebase							
+- git cherry-pick
