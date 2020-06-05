@@ -1,9 +1,12 @@
+https://www.pngwave.com/png-clip-art-zgbcw --WOFT--
+
 *** Một số extensions trong visual code
 - Reactjs code snippets
 - Eslint
 - Auto close tag
 - Auto rename tag
 - vscode-icons
+- SCSS Formatter
 
 *** Extensions chrome
 React Developer tools
@@ -22,6 +25,10 @@ install: - npm install redux react-redux --save
 * Axios API
 https://github.com/axios/axios
 install: - npm install axios --save
+
+* SCSS
+
+install: npm install --save node-scss
 
 * Material
 https://material-ui.com/getting-started/installation/
@@ -103,6 +110,8 @@ Lưu ý:  getDeviredStateFromProps là hàm tĩnh,không thể dùng this.setSta
 - Cú pháp: - Set: localStorage.setItem('keys',value);
 		   - Get: localStorage.getItem('keys');
 		   - Remove: Set item again
+		\
+*** Tối ưu hóa hiệu suất trong reactJS: https://reactjs.org/docs/optimizing-performance.html
 		   
 *** PropTypes 
 - https://reactjs.org/docs/typechecking-with-proptypes.html
@@ -110,6 +119,9 @@ Lưu ý:  getDeviredStateFromProps là hàm tĩnh,không thể dùng this.setSta
 
 *** React Router
 https://reacttraining.com/react-router/web/example/basic
+https://stackoverflow.com/questions/43164554/how-to-implement-authenticated-routes-in-react-router-4
+https://stackoverflow.com/questions/44666149/redirect-to-login-page-using-react-router-v4
+https://www.youtube.com/watch?v=mAhUJdf0Kug
 - Nếu muốn dùng các thẻ sau thì import vào
 - BrowserRouter as Router: Bao các route lại
 - Route: dẫn đến các component tùy chọn. Ex: <Route path="/" exact component={Home} />
@@ -120,6 +132,7 @@ https://reacttraining.com/react-router/web/example/basic
 - Match: Sử dụng match để lấy trang url hiện tại. Có thể sử dụng để get sản phẩm và hiển thị chi tiết sản phẩm từ đối tượng match này.
 - Prompt(Lời nhắc): Giúp hiển thị một alert khi người dùng thoát khỏi trang. vd khi đã nhập text mà bấm thoát trang thì sẻ hỏi có muốn thoát trang hay không?
 *** Redux
+
 - Gồm 4 thần chính: action, reducer, store, view
 - action: mang thông tin từ người dùng đến reducer
 - reducer: quyết định việc thay đổi state trên store như thế nào
@@ -167,6 +180,9 @@ https://viblo.asia/p/su-dung-reactjs-trong-project-laravel-OeVKBJpdKkW
 https://viblo.asia/p/authorization-voi-jwt-trong-reactredux-app-GrLZD8nOZk0
 https://levelup.gitconnected.com/using-jwt-in-your-react-redux-app-for-authorization-d31be51a50d2
 https://viblo.asia/p/tai-sao-phai-su-dung-json-web-token-jwt-de-bao-mat-api-maGK787AZj2
+https://stackoverflow.com/questions/43164554/how-to-implement-authenticated-routes-in-react-router-4
+https://stackoverflow.com/questions/44666149/redirect-to-login-page-using-react-router-v4
+https://www.youtube.com/watch?v=mAhUJdf0Kug
 
 ** Eslint
 - Giúp code chặt chẽ theo rule hơn.
@@ -187,6 +203,9 @@ https://viblo.asia/p/tai-sao-phai-su-dung-json-web-token-jwt-de-bao-mat-api-maGK
 - Sử dụng eslint-config-airbnb để thêm một số rule về space, v.v (https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb), nên lược bỏ một số rule không cần thiết
 
 ** Prettier
+- npm install --save-dev eslint-config-prettier
+- npm install prettier --save-dev
+- npm install --save-dev eslint-plugin-prettier
 - Tích hợp Prettier để kết hợp eslint format code theo rule, và thêm một số rule (eslint-config-prettier, eslint-plugin-prettier, prettier) (https://prettier.io/docs/en/integrating-with-linters.html)
 
 ** Husky
@@ -198,6 +217,15 @@ https://viblo.asia/p/tai-sao-phai-su-dung-json-web-token-jwt-de-bao-mat-api-maGK
 ** Editor config extensions
 - Giúp cấu hình file code ( vd: space 2, độ dài tối đa dòng code: 80, v.v)
 - Copy tại: https://github.com/facebook/react/blob/master/.editorconfig
-		 
+
+** Tổ chức trong dự án ReactJS
+https://medium.com/@davidtranwd/t%E1%BB%95-ch%E1%BB%A9c-v%C3%A0-s%E1%BA%AFp-x%E1%BA%BFp-m%E1%BB%99t-d%E1%BB%B1-%C3%A1n-react-redux-f1d9a622b623
+https://viblo.asia/p/react-boilerplate-cau-truc-thu-muc-hoan-hao-cho-mot-du-an-reactjs-ByEZk6P4KQ0
+https://viblo.asia/p/reactjs-project-structure-RnB5pkD6lPG
+https://nullcast.io/react-redux-saga-folder-architecture/
+
+** React Saga structure 
+https://stackoverflow.com/questions/49703659/how-to-setup-redux-sagas-and-file-structure
+https://medium.com/swlh/asynchronous-with-redux-sagas-b43c9630f218
 
 
