@@ -103,8 +103,71 @@ Nên sử dụng:
 - getDerivedStateFromProps(): Xảy ra trước khi render khi có props hoặc state thay đổi. Có thể return state mới ở đây theo props hoặc không thay đổi thì return null.
 Lưu ý:  getDeviredStateFromProps là hàm tĩnh,không thể dùng this.setState 
 
+*** React Hooks
 
-* Sử dụng localStorage
+** useState
+- useState('initialstate') giúp functional component có thế sử dụng state.
+- useState() trả về một mảng gồm tên state và function set state, example: const [name, setName] = useState('quoc'); // quoc là initial state
+- useState() là replace chứ không phải merging như bên class component. Mỗi lần set lại state phải lấy state cũ merge với phần thay đổi xong rồi mới set state.
+- initialstate chỉ được khởi tạo lần đầu. Trong một số trường hợp như call api thì nên gọi nó trong useState(()=>{handle and return initialState})
+
+** useEffect
+https://drive.google.com/file/d/1CXxCJsabcG3IkSG1PQaWNVv12ePYICA1/view
+
+- Sử dụng để gọi, xử lý những cái side effect trong component
+- Cú pháp: 
+useEffect(callback, dependencies)
+
+Example:
+useEffect(() => {
+	// Sử lý side effect ở đây
+	// same as componentDidMount
+	return () => {
+		// clean các state và clear settimout ở đây
+		// Được chạy trước khi render tiếp theo hoặc component unmount
+	};
+}, []);
+*Note
+- Trong useEffect nếu không truyền dependencies thì nó sẽ luôn luôn được gọi. 
+Nếu truyền là [] thì nó chỉ chạy lần đâu như componentDidMount và componentWillUnmount
+Nếu truyền là [filter] thì chỉ khi filter thay đổi thì nó mới gọi lại useEffect
+
+** useRef
+- useRef sẽ tạo một object và giữ nó trong suốt vòng đời của component. rerender cũng không thay đổi
+
+** Lifecycle in react hooks
+* Mounting
+- rendering
+- chạy useEffect cho đến trước phần return
+
+* Update
+- rendering
+- chạy phần return của useEffect để clean trước
+- chạy phần trên return trong useEffect
+
+*Unmount
+- chạy phần return trong useEffect
+
+** Custom Hooks
+- Custom hook là một kỹ thuật giúp gom các xử lý logic trùng lặp ở nhiều component đặt trong một hook và dùng lại ở nhiều component khác nhau
+- Dữ liệu trong custom hooks là độc lập với mỗi hook khi được sử dụng ở nhiều component khác nhau
+
+** React.memo
+- React.memo là một HOC giúp cải thiện performance của component, chỉ khi prop thay đổi thì nó mới rerender. 
+- Nó sử dụng shadow compare để biết props khi nào thay đổi
+- Chỉ nên sử dụng với những component sử lý nặng và ít rerender
+
+**useCallback
+- Cú pháp: const funcCallBack = useCallback(()=> {}, [])
+- Trả về một function. Và tạo duy nhất một lần, không làm rerender lại component con
+
+**useMemo
+- Cú pháp: const memoValue = useMemo(()=> [{value}], [])
+- Trả về một value. Và tạo duy nhất một lần, không làm rerender lại component con
+
+Note: Chỉ nên sử dung useCallback và useMemo khi load những component cực nặng và nên sử dụng để tối ưu performance khi đã code xong.
+
+*** Sử dụng localStorage
 - Lưu ở localStorage khi đóng trình duyệt hay reload sẽ không bị xóa.
 - Có thể lưu tới ~5M
 - Cú pháp: - Set: localStorage.setItem('keys',value);
@@ -165,6 +228,15 @@ và nó chỉ lắng nghe được một lần, nếu muốn nhiều lần phả
 - takeLatest: thay thế cho fork, mà không cần sử dụng vòng lặp vô tận như fork, chạy một loạt action và lấy kết quả của cuối cùng. Ex: khi sử dụng search
 - takeEvery: ngược lại takeLatest. Chạy mỗi khi gọi action và không quan tâm action trước đã xong hay chưa.
 - select: lấy data từ store
+
+***Mobx
+
+https://techblog.vn/gioi-thieu-ve-mobx-va-react-trong-muoi-phut
+
+
+*** TypeScript
+https://blog.alexdevero.com/todo-list-app-react-hooks-typescript/
+https://github.com/alexdevero/react-hooks-todo-list-app-ts
 
 *** Một số cách giả lập API
 - MockAPI(https://mockapi.io/): sử dụng trên internet, có thể tạo mockApi để deloy web react
