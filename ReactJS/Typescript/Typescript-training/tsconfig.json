@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "amd",
+        "outDir": "mjs",
+        "watch": true,
+        "removeComments": true
+    },
+    "exclude": [
+        "css",
+        "js",
+        "mjs",
+    ]
+}
