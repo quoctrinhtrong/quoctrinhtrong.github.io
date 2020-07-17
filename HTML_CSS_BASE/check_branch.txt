@@ -1,2 +1,2 @@
-New edit from develop develop_rebase_changed
+New edit from new_branch_05
 New line check git merge
