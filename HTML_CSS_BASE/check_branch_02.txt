@@ -1,0 +1,2 @@
+New edit from branch05 branch05_rebase
+New line check git merge
