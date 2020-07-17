@@ -1,2 +1,2 @@
-New edit from new_branch_05
+New edit from branch05 branch05_amend
 New line check git merge
