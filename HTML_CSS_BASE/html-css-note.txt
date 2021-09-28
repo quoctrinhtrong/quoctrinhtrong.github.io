@@ -135,6 +135,9 @@ order: <number> // Sắp xếp thứ tự của item trong flex.
 
 * https://caniuse.com/ check support của các thẻ html, css
 
+** transition
+- Dùng để animation
+
 ***** PRACTICAL CONTENT *****
 
 **Header sử dụng flex-box;
@@ -230,6 +233,63 @@ ex: <meta name="viewport" content="width=device-width, initial-scale=1">
 * CSS in JS
 Giúp viết css trong js
 Giúp không phải quan tâm việc đặt tên trong css, thư viện giúp ta đặt tên
+
+*** Quy ước đặt tên BEM
+
+* Block 
+- Block ở đây thông thường có thể hiểu như các thành phần header, body, content, footer, cũng có thể là left-side hay right-side hay column nằm trong grid. 
+Về cơ bản, tức là 1 Block thì cần chứa tối thiểu 1 Element ở trong.
+- Example:
+    .block {}   /* Block */
+
+* Element
+- Tiếp đến trong Block ta thường có các element, những đối tượng chịu tác động nhiều về typography hơn là layout.
+- Example: 
+    .block__element {}  /* Element */
+	.hero__headline
+	.hero__button
+	.hero_text
+
+* Modifier
+- Quá trình xây dựng layout và các element không thể tránh khỏi việc trùng các class của lớp Element. Lớp Block thì tỷ lệ đụng mặt nhau ít hơn.
+- Modifier kế thừa từ cha và sữa một phần thuộc tính trong đó.
+    .block--modifier {}  /* Modifier */
+
+- Example: 
+	hero__button--outline // hero: block, button: element, outline: modifier
+	class="hero__button hero__button--outline" mới là hợp lý.
+	
+# Example:
+- .hero__button // block hero, element là button
+- .hero__button--primary // block hero, element button, modifier primary
+
+https://techmaster.vn/posts/34580/bem-theo-vi-du
+
+***link tao clip path: https://bennettfeely.com/clippy/
+
+*************** SASS
+--Nesting trong SASS
++ Dễ maintain, gom các css trong 1 block
+
+.block {
+  &__element1 {
+    &--modifier {
+      
+    }
+  }
+  &__element2 {
+    &--modifier {
+      
+    }
+  }
+  &__element3 {
+    &--modifier {
+      
+    }
+  }
+}
+
+
 
 
 

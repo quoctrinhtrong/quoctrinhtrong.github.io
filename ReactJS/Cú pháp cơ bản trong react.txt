@@ -195,6 +195,7 @@ https://www.youtube.com/watch?v=mAhUJdf0Kug
 - Match: Sử dụng match để lấy trang url hiện tại. Có thể sử dụng để get sản phẩm và hiển thị chi tiết sản phẩm từ đối tượng match này.
 - Prompt(Lời nhắc): Giúp hiển thị một alert khi người dùng thoát khỏi trang. vd khi đã nhập text mà bấm thoát trang thì sẻ hỏi có muốn thoát trang hay không?
 *** Redux
+- Redux flow: https://redux.js.org/tutorials/fundamentals/part-2-concepts-data-flow
 
 - Gồm 4 thần chính: action, reducer, store, view
 - action: mang thông tin từ người dùng đến reducer
@@ -233,7 +234,12 @@ và nó chỉ lắng nghe được một lần, nếu muốn nhiều lần phả
 
 https://techblog.vn/gioi-thieu-ve-mobx-va-react-trong-muoi-phut
 https://levelup.gitconnected.com/react-hooks-mobx-todolist-c138eb4f3d04
-- Anh Dương, trong thời gian qua em đã sắp xếp công việc và tìm cho mình môi trường mới để tiếp tục hướng đi của mình. Nên em mong anh có thể giúp em thay đổi ngày làm việc cuối cùng của em sớm hơn một vài ngày so với 45 ngày như quy định. Em mong muốn ngày làm việc cuối cùng là ngày 10/7 hoặc 14/7 tùy theo công việc. Em cảm ơn anh đã dành thêm thời gian sắp sếp sau khi em xin nghỉ. Mong anh có thể hiểu và thông cảm cho em.
+https://viblo.asia/p/gioi-thieu-ve-mobx-va-react-trong-muoi-phut-bJzKmyrEK9N
+
+https://viblo.asia/p/build-app-reactjs-with-mobx-and-typescript-maGK7JQA5j2
+
+- Sử dụng mobx trong reactjs call API: https://mono.software/2019/04/16/async-webapi-calls-using-react-with-mobx/
+
 
 *** TypeScript
 https://blog.alexdevero.com/todo-list-app-react-hooks-typescript/
@@ -262,6 +268,12 @@ https://viblo.asia/p/tai-sao-phai-su-dung-json-web-token-jwt-de-bao-mat-api-maGK
 https://stackoverflow.com/questions/43164554/how-to-implement-authenticated-routes-in-react-router-4
 https://stackoverflow.com/questions/44666149/redirect-to-login-page-using-react-router-v4
 https://www.youtube.com/watch?v=mAhUJdf0Kug
+
+** Phân biệt authentication và authorization.
+- Authentication giúp nhận diện có phải user hay không, xảy ra trước khi sinh ra jwt
+- Authorization giúp biết user đó có quyền gì, vd như jwt( JSON Web Token ) có quyền truy cập không, mỗi lần lấy dữ liệu gửi lên
+
+
 
 ** Eslint
 - Giúp code chặt chẽ theo rule hơn.

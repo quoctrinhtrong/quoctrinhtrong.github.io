@@ -1,0 +1,55 @@
+.testimonial {
+    width: 80%;
+    padding: 60px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    box-shadow: 0 30px 60px rgba($color: $color-black, $alpha: 0.15);
+    font-size: $default-font-size;
+    border-radius: 100px;
+    background-color: rgba($color: $color-white, $alpha: 0.1);
+    padding-left: 90px;
+    // display: flex;
+
+    &__shape {
+        width: 150px;
+        height: 150px;
+        background-color: orangered;
+        float: left;
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-30px);
+        margin-top: -10px;
+        // giup chu border theo hinh tron
+        shape-outside: circle(50% at 50% 50%);
+        position: relative;
+    }
+
+    &__img {
+        width: 100%;
+        transform: translateY(-20px);
+        transition: all .3s;
+    }
+
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 20%);
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 17px;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__img {
+        scale: 1.05;
+        filter: blur(5px) brightness(70%);
+
+    }
+}

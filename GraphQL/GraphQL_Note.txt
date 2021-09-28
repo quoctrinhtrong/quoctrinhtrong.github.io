@@ -1,0 +1,10 @@
+*** GraphQL là một cú pháp mô tả cách truy vấn dữ liệu
+
+*** Basic
+- Query: Dùng để get dữ liệu
+- Mutation: Dùng để post, put dữ liệu
+- Subscription: Dùng trong trường hợp realtime data
+
+*** Refer
+- https://viblo.asia/p/cung-tim-hieu-ve-graphql-07LKX4zeKV4
+- https://viblo.asia/p/graphql-ma-toi-thuong-nghe-thay-la-thu-gi-phan-1-L4x5x0aB5BM

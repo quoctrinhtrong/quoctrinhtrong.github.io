@@ -117,6 +117,8 @@ console.log(gen.next(13));
 ** Websocket (server push)
 
 - Có thể gửi và nhận từ 2 chiều khi data thay đổi
+
+** XSS
 	
 
 

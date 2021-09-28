@@ -1,0 +1,13 @@
+.enroll {
+    background-image: radial-gradient(150% 200% ellipse at -15%, rgba($color-white, .8) 50%, transparent 50%), url("../img/humangroups3.jpg");
+    background-size: cover;
+    box-shadow: 0 15px 40px rgba($color: $color-black, $alpha: .2);
+    border-radius: 50px;
+    height: 500px;
+    width: 70%;
+
+    &__form {
+        padding: 60px;
+    }
+
+}

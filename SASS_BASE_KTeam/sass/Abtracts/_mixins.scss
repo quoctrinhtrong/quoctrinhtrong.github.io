@@ -1,0 +1,29 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin respond ($bearkpoint) {
+    @if $bearkpoint == phone {
+        @media (max-width: 600px) {@content};
+    }
+    @if $bearkpoint == tab-port {
+        @media (max-width: 900px) {@content};
+    }
+    @if $bearkpoint == tab-land {
+        @media (max-width: 1200px) {@content};
+    }
+    @if $bearkpoint == bid-desktop {
+        @media (max-width: 1800px) {@content};
+    }
+}

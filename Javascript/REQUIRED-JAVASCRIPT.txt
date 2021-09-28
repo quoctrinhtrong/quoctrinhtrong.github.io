@@ -7,3 +7,4 @@ https://viblo.asia/p/mot-vai-cau-hoi-ve-javascript-ma-mot-intern-fresher-can-bie
 - array.map
 - array.reduce
 - array.sort
+- closure: https://viblo.asia/p/tim-hieu-closures-trong-javascript-don-gian-nhat-Ljy5Vp2zZra

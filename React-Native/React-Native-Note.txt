@@ -1,0 +1,2 @@
+Create Project: - 
+Run project: - npx react-native run-android

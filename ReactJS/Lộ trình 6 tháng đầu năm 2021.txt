@@ -1,0 +1,35 @@
+Tham khao:
+https://viblo.asia/p/front-end-developer-mot-vai-meo-de-viet-code-css-chuyen-nghiep-hon-yMnKM2djZ7P
+
+- 22/2 -> 21/3: Lập trình Javascript cơ bản
+https://fullstack.edu.vn/courses/javascript-co-ban
+
+- 22/3 -> 21/4: scss
+https://www.youtube.com/watch?v=JdITPt7LORk&list=PL33lvabfss1wstoZNI8szds9s0ESVbuqs&index=37
+
+- 22/4 -> 21/5: React Hook, Redux
+https://www.youtube.com/watch?v=X2WHW1KMmsU&list=PLeS7aZkL6GOvCz3GiOtvtDXChJRuebb7S&index=12
+
+- 22/5 => 
+https://www.youtube.com/watch?v=zK9ek82u_Lg&list=PLJ5qtRQovuEOqsMokakP9ue-y_jXhmCwJ&index=13
+
+------------------------------------------------------------------------------------------------------
+
+https://viblo.asia/p/su-dung-sass-voi-create-react-app-bWrZnEzpKxw
+
+// start
+https://viblo.asia/p/usedispatch-useselector-va-nguoi-anh-connect-trong-redux-gGJ59QWj5X2
+https://itnext.io/how-existing-redux-patterns-compare-to-the-new-redux-hooks-b56134c650d2
+
+// React hooks redux thunk
+https://vomanhkien.com/redux-thunk-hooks-api/
+https://github.com/kungfu321/reactjs-example/tree/master/with-redux-thunk-hooks/src/redux
+
+// series react hook redux toolkit
+https://www.youtube.com/watch?v=X2WHW1KMmsU&list=PLeS7aZkL6GOt6eTIWZzKjYjRwh0DSKtDZ&index=7
+
+// Hook typescript
+https://typeofnan.dev/your-first-react-typescript-project-todo-app/
+
+// 
+

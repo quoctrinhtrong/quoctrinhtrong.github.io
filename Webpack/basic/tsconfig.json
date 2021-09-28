@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+      "target": "ES5",
+      "allowJs": true,
+      "strict": true,
+      "module": "ESNext",
+      "moduleResolution": "node",
+      "noImplicitAny": false,
+      "sourceMap": true,
+      "baseUrl": ".",
+      // path tạo alias thuận tiện cho việc import. Thay vì "../../file" chỉ cần "@/file", việc alias này phải config cả bên webpack
+      "paths": {
+        "@/*": ["src/*"],
+        "@@/*": ["./*"]
+      }
+    },
+    "include": ["src/**/*"]
+  }
