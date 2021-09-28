@@ -17,6 +17,9 @@
 
 git remote set-url origin ssh_url
 
+
+set token to my git: git remote set-url origin https://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@github.com/quoctrinhtrong/quoctrinhtrong.github.io.git/
+
 NOTE: Khi gặp conflict thì "git pull" về và chọn mội dung => git add . => git commit -m "resolve conflict" => git push
 ---
 
